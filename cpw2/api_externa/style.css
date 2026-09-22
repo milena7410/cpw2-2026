@@ -1,0 +1,19 @@
+body{   
+    background-image: linear-gradient(
+        to left,
+        rgb(59, 141, 8),
+        rgb(110, 247, 24)
+        
+    );
+}
+h1{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: oblique;
+}
+
+label{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke: 1px black;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felipe Benitez</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form id="meuFormulario" novalidate>
+    <label>Data:</label>
+    <input type="text" id="data_id" required pattern="\d{2}\/\d{2}\/\d{4}" title="Digite a data" />
+    <span id="mensagemErro" class="erro-escondido">FORMATO DE DATA INVALIDO</span>
+
+    <button type="submit">Enviar</button>
+
+
+
+    <label>PLACA MERCOSUL:</label>
+    <input type="text" id="placa_merco" required pattern="[A-Z]{3}[0-9][A-Z][0-9]{2}" title="Digite a placa" />
+    <span id="mensagemErroPlaca" class="erro-escondido">FORMATO DE PLACA INVALIDO</span>
+
+    <button type="submit">Enviar</button>
+
+    <label>SENHA:</label>
+    <input type="text" id="senha" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Digite a SENHA" />
+    <span id="mensagemErroSenha" class="erro-escondido">FORMATO DE SENHA INVALIDO</span>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

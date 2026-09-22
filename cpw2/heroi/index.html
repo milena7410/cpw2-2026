@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Criador de Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Criador de Card</h2>
+
+<label>
+    Nome: 
+    <input type="text" id="inputNome" oninput="atualizar()">
+</label>
+  
+<label>
+    Classe: 
+    <select id="selectClasse" onchange="atualizar()">
+      <option value="sword">Guerreiro</option>
+      <option value="wizard">Mago</option>
+      <option value="archer">Arqueiro</option>
+    </select>
+</label>
+
+  <label>
+    Cor do Card: 
+    <select id="selectCor" onchange="atualizar()">
+      <option value="dodgerblue">Azul</option>
+      <option value="crimson">Vermelho</option>
+      <option value="mediumseagreen">Verde</option>
+    </select>
+</label>
+
+  <div id="card">
+    <img id="cardIcone" width="80" alt="Ícone">
+    <h3 id="cardNome">Seu Nome</h3>
+  </div>
+
+  <br>
+  <button onclick="salvar()">Salvar em JSON</button>
+  <p><b>JSON:</b> 
+    <span id="outputJson">-</span></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

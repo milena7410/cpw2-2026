@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade de Validação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form id="meuFormulario">
+    <!--mínimo 5 caracteres e TODAS MAIÚSCULAS -->
+    <label>Nome:</label>
+    <input type="text" id="nome" name="nome" 
+    minlength="5" pattern="[A-Z]{5,50}" 
+    title="Pelo menos 5 caracteres MAIÚSCULAS" required>
+    <br><br>
+
+    <!--mínimo 5 caracteres e TODAS MINÚSCULAS -->
+    <label>Sobrenome:</label>
+    <input type="text" id="sobrenome" name="sobrenome" minlength="5" pattern="[a-z]{5,50}" title="Pelo menos 5 caracteres minúsculos" required>
+    <br><br>
+
+    <!-- Mínimo 18 anos -->
+    <label>Idade:</label>
+    <input type="number" id="idade" name="idade" min="18" title="A idade mínima é 18 anos" required>
+    <br><br>
+
+    <button type="button" onclick="validarFormulario()">Enviar</button>
+  </form>
+
+  <script>
+    function validarFormulario() {
+      const form = document.getElementById('meuFormulario');
+
+      // Testa se todos os campos html
+      if (form.checkValidity()) {
+        alert("Formulário validado com sucesso!");
+      } else {
+        // Exibe o balão de aviso
+        form.reportValidity();
+      }
+    }
+
+   
+    const inputIdade = document.getElementById('idade');
+    inputIdade.addEventListener('change', (event) => {
+      if (!event.target.checkValidity()) {
+        event.target.reportValidity(); // Mostra o balão de aviso se for < 18
+      }
+    });
+
+
+    inputNpme
+
+  </script>
+
+</body>
+</html>

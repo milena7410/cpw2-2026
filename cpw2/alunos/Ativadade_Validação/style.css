@@ -1,0 +1,45 @@
+input:invalid:not(:placeholder-shown){
+    border: red solid 4px;
+}
+
+input:valid{
+    border: green solid 4px;
+}
+
+.divPrinc{
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+
+    border: 2px dashed brown;
+    border-radius: 3px;
+    background-color: #fafafa;
+    box-shadow: 0 4px 12px rgba(0,0,0, 0.1);
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.botaoEnviar{
+    color: white;
+    background-color:cornflowerblue;
+    border-radius: 6px;
+    margin-top: 5px;
+    padding: 10px 20px;
+
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.botaoEnviar:hover{
+    background-color: #4f7fd3;
+}
+
+input{
+    padding: 6px;
+}

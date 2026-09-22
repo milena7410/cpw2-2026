@@ -1,0 +1,22 @@
+
+Com base no que foi passado em aula crie formulários com validações.
+
+Nível Fácil 
+Data (dd-mm-aaaa).
+
+Nível Médio
+Placa Mercosul (antiga) - Apenas letras maiúsculas entre 4-8 caracteres;
+
+
+Nível Avançado
+Criar validador de senha para senha (fraca/média/forte);
+Fraca: 8+ caracteres, mas só letras OU só números.
+Média: 8+ caracteres + letras e números.
+Forte: 8+ caracteres + maiúscula + minúscula + número + caractere especial.
+
+Dica: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern
+https://www.w3schools.com/tags/att_input_pattern.asp
+
+
+* Não esqueça de adicionar style e elementos de UX 
+

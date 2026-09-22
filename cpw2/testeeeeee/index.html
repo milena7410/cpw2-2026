@@ -1,0 +1,25 @@
+<form id="formCadastro">
+  <label for="nome">Nome Completo:</label>
+  <input type="text" id="nome" required minlength="3">
+  
+  <label for="idade">Idade:</label>
+  <input type="number" id="idade" required min="18">
+
+  <button type="button" id="btnSalvar">Salvar Cadastro</button>
+</form>
+
+<script>
+  const form = document.getElementById('formCadastro');
+  const btnSalvar = document.getElementById('btnSalvar');
+
+  btnSalvar.addEventListener('click', () => {
+    // reportValidity() verifica tudo. Se tiver erro, ele mostra o balão e retorna false.
+    const ehValido = form.reportValidity();
+
+    if (ehValido) {
+      console.log("Formulário validado com sucesso!");
+    } else {
+      console.log("O navegador acabou de exibir o balão de erro para o usuário.");
+    }
+  });
+</script>

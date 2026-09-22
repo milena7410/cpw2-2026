@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="divPrinc">
+        <form>
+            <label>Insira uma data para verificação no formato indicado dd-mm-aaaa</label>
+            <input 
+            type="text"
+            id="data"
+            required
+            pattern="\d{2}-\d{2}-\d{4}"
+            placeholder="dd-mm-aaaa"
+            ><br>
+
+            <label>Insira a placa do veículo AAA0000</label>
+            <input 
+            type="text"
+            id="placa"
+            required
+            pattern="[A-Z]{3}\d{4}"
+            placeholder="AAA0000">
+
+            <button id="botaoForm" class="botaoEnviar" type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

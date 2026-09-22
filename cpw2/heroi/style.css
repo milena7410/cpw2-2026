@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+#card {
+  padding: 20px;
+  color: white;
+  background-color: dodgerblue;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+}

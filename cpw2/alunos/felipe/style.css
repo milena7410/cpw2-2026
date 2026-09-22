@@ -1,0 +1,15 @@
+/* Estilo básico para a mensagem de erro */
+.erro-escondido {
+  display: none;
+  color: black;
+  font-size: 12px;
+}
+
+/* O próprio CSS consegue pintar o campo se ele estiver inválido */
+/* input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: rgb(0, 232, 0);
+} */

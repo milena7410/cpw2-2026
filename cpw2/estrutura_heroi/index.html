@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- nome do heroi -->
+    <label>
+        NOME
+        <input type="text" id="heroi_nome" oninput="atualizar()">
+    </label>
+    <!-- classe do heroi -->
+    <label>
+        CLASSE
+        <select id="select_heroi" onchange="atualizar()">
+            <option value="wizard">BRUXO</option>
+            <option value="sword">GUERREIRO</option>
+            <option value="hunter">CACADOR</option>
+        </select>
+    </label>
+    <!-- cor do card -->
+    <label>
+        COR
+        <select id="select_cor" onchange="atualizar()">
+            <option value="lightskyblue">AZUL</option>
+            <option value="brown">VERMELHO</option>
+            <option value="chartreuse">VERDE</option>
+        </select>
+    </label>
+    <br><br>
+    <div id="card">
+        <img id="card_icone">
+        <h2 id="card_nome"></h2>
+
+    </div>
+    <br><br>
+    <button onclick="salvar()">salvar</button>
+    <span id="dado_json"></span>
+
+
+<script src="script.js"></script>
+</body>
+</html>

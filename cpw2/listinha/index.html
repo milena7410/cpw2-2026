@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEROI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <label>
+        NOME
+        <input type="text" id="nome_heroi" oninput="atualizar()">
+    </label>
+    
+    <label>
+        CLASSE
+       <select id="select_class" onchange="atualizar()">
+        <option value="wizard">MAGO</option>
+        <option value="warrior">GUERREIRO</option>
+        <option value="ninja">NINJA</option>
+       </select>
+    </label>
+
+    <label>
+        COR
+       <select id="select_color" onchange="atualizar()">
+        <option value="aqua">AZUL</option>
+        <option value="brown">VERMELHO</option>
+        <option value="gray">CINZA</option>
+       </select>
+    </label>
+<br>
+<br>
+    <div id="card">
+        <img id="cardIcon" width="60px">
+         <h3 id="cardNome">Seu Nome</h3>
+    </div>
+
+    <br><br>
+    <button onclick="salvar()">
+        SALVAR DADOS
+    </button>
+
+    <span id="dados_json"></span>
+</body>
+<script src="script.js"></script>
+</html>

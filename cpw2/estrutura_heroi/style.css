@@ -1,0 +1,31 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    background-image: linear-gradient(
+        to right,
+        rgb(26, 104, 230),
+        rgb(90, 157, 228)
+    );
+}
+
+label{
+    color: white;
+}
+select{
+    cursor: pointer;
+}
+
+#card{
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+    box-shadow: 5px 5px 15px black;
+    margin: auto;
+    transition: 3s;
+}
+
+#card:hover{
+    transform: translateY(-15px) scale(1.0);
+}
