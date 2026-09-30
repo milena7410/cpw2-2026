@@ -1,0 +1,248 @@
+
+body {
+    font-family: 'Nunito', sans-serif;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 30px;
+
+    min-height: 100vh;
+
+    background: linear-gradient(
+        120deg,
+        #0d47a1,
+        #1976d2,
+        #64b5f6,
+        #ffd600
+    );
+}
+  
+h1 {
+    font-family: 'Bangers', cursive;
+
+    font-size: 55px;
+
+    color: #ffd600;
+
+    letter-spacing: 3px;
+
+    margin: 10px 0 0;
+
+    text-shadow:
+        3px 3px #0d47a1,
+        -1px -1px white;
+}
+
+header p {
+    color: white;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-top: 5px;
+}
+
+.pesquisa {
+    margin: 25px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.pesquisa input {
+    width: 300px;
+
+    padding: 12px 15px;
+
+    border: 3px solid #ffd600;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background-color: white;
+}
+
+.pesquisa input:focus {
+    border-color: #0d47a1;
+}
+
+.pesquisa button {
+    padding: 12px 20px;
+
+    background-color: #ffd600;
+
+    color: #0d47a1;
+
+    border: 3px solid #0d47a1;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.pesquisa button:hover {
+    background-color: white;
+
+    transform: scale(1.05);
+}
+
+#resultado {
+    width: 700px;
+
+    max-width: 90%;
+
+    margin: 35px auto;
+
+    padding: 25px;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    border: 5px solid #0d47a1;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+#id {
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    margin: 0;
+
+    background-color: #ffd600;
+
+    color: #0d47a1;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+#nome {
+    font-family: 'Bangers', cursive;
+
+    font-size: 40px;
+
+    letter-spacing: 2px;
+
+    color: #0d47a1;
+
+    text-transform: capitalize;
+
+    margin: 10px 0;
+}
+
+#imagem {
+    width: 300px;
+
+    height: 300px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 10px auto;
+
+    background: linear-gradient(
+        135deg,
+        #e3f2fd,
+        #fffde7
+    );
+
+    border-radius: 20px;
+
+    border: 3px solid #1976d2;
+}
+
+#tipos,
+#habilidades,
+#hp,
+#ataque,
+#defesa {
+    font-weight: bold;
+
+    padding: 10px;
+
+    margin: 8px auto;
+
+    max-width: 500px;
+
+    border-radius: 8px;
+}
+
+#tipos {
+    background-color: #e3f2fd;
+
+    color: #1565c0;
+}
+
+#habilidades {
+    background-color: #fff8c4;
+
+    color: #8a6500;
+}
+#hp {
+    background-color: #fff3cd;
+
+    color: #b88600;
+}
+
+#ataque {
+    background-color: #e3f2fd;
+
+    color: #1565c0;
+}
+
+#defesa {
+    background-color: #dbeafe;
+
+    color:#0d47a1
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .pesquisa {
+        flex-direction: column;
+    }
+
+    .pesquisa input {
+        width: 80%;
+    }
+
+    #resultado {
+        width: 90%;
+    }
+
+    #imagem {
+        width: 250px;
+
+        height: 250px;
+    }
+}

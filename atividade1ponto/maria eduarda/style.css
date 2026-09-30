@@ -1,0 +1,198 @@
+
+body {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+
+    background: linear-gradient(135deg, #1d3557, #457b9d, #a8dadc);
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
+
+    background-color: rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+    top: -100px;
+    left: -100px;
+
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+    bottom: -200px;
+    right: -150px;
+
+    z-index: -1;
+}
+
+h1 {
+    color: white;
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 25px;
+
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+input {
+    padding: 11px;
+    margin-left: 5px;
+
+    border: 2px solid #1d3557;
+    border-radius: 8px;
+
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #e63946;
+}
+
+button {
+    padding: 11px 22px;
+    margin-left: 5px;
+
+    background-color: #e63946;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #c1121f;
+    transform: scale(1.05);
+}
+
+
+#resultado {
+    width: 350px;
+    min-height: 500px;
+
+    margin: 35px auto;
+    padding: 20px;
+
+    background-color: #f8f1d8;
+
+    border: 8px solid #d4af37;
+    border-radius: 18px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+
+    transition: 0.5s;
+}
+
+
+#imagem {
+    width: 220px;
+    height: 220px;
+
+    object-fit: contain;
+
+    background-color: #e8f0f2;
+
+    border: 3px solid #333;
+    border-radius: 10px;
+}
+
+
+#nome {
+    color: #1d3557;
+
+    font-size: 30px;
+    font-weight: 900;
+
+    text-transform: capitalize;
+
+    margin: 15px 0 5px;
+}
+
+#id {
+    color: #666;
+    font-weight: 700;
+}
+
+
+
+#tipos,
+#habilidades,
+#hp,
+#ataque,
+#defesa {
+    font-weight: 700;
+    margin: 8px;
+}
+
+
+
+#tipos {
+    color: #2a9d8f;
+}
+
+#habilidades {
+    color: #8338ec;
+}
+
+#hp {
+    color: #e63946;
+}
+
+#ataque {
+    color: #f77f00;
+}
+
+#defesa {
+    color: #457b9d;
+}
+
+
+
+.fogo {
+    background-color: #ffd6c9 !important;
+}
+
+.agua {
+    background-color: #c9e6ff !important;
+}
+
+.planta {
+    background-color: #d5f5d5 !important;
+}
+
+.eletrico {
+    background-color: #fff3a6 !important;
+}
+
+.normal {
+    background-color: #e5ddd5 !important;
+}

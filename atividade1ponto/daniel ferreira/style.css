@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 42px 20px 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #0F172A;
+    font-family: "Courier New", "Lucida Console", monospace;
+    image-rendering: pixelated;
+}
+
+body::before {
+    width: min(100% - 40px, 520px);
+    padding: 8px 12px;
+    position: absolute;
+    top: 12px;
+    color: rgba(223, 240, 213, 0.6);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: right;
+    pointer-events: none;
+}
+
+h1 {
+    margin: 12px 0 2px;
+    color: #f4c542;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+label {
+    width: min(100%, 520px);
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    border: 5px solid ;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #aaa9d0, #5d5a91);
+    color: #dff0d5;
+    font-weight: bold;
+    line-height: 1.5;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.28), 7px 7px 0 #302e5c;
+}
+
+input {
+    min-width: 150px;
+    flex: 1;
+    padding: 11px 12px;
+    border: 3px solid #302e5c;
+    border-radius: 5px;
+    outline: none;
+    background: #a9d8c2;
+    color: #222345;
+    font: inherit;
+    font-weight: bold;
+}
+
+input:focus {
+    background: #dff0d5;
+    box-shadow: 0 0 0 3px #f4c542;
+}
+
+#resultado {
+    width: min(100%, 520px);
+    min-height: 240px;
+    padding: 18px;
+    border: 12px solid #302e5c;
+    border-radius: 14px;
+    background: repeating-linear-gradient(0deg, rgba(40, 88, 92, 0.06) 0 2px, transparent 2px 4px), #dff0d5;
+    text-align: center;
+    box-shadow: inset 0 0 0 3px #28585c, 7px 7px 0 #302e5c;
+}
+
+#resultado h1 {
+    margin: 0 0 8px;
+    color: #222345;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.45);
+    text-transform: capitalize;
+}
+
+#resultado img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 12px;
+    image-rendering: pixelated;
+    filter: drop-shadow(4px 4px 0 rgba(40, 88, 92, 0.5));
+}
+
+#resultado h2 {
+    margin: 6px 0;
+    font-size: 1rem;
+}
+
+#resultado strong {
+    color: #28585c;
+}
+
+button {
+    padding: 12px 28px;
+    border: 4px solid #302e5c;
+    border-radius: 18px;
+    background: #c8425b;
+    color: #dff0d5;
+    cursor: pointer;
+    font: bold 1rem "Courier New", "Lucida Console", monospace;
+    letter-spacing: 1px;
+    box-shadow: 5px 5px 0 #302e5c;
+    transition: transform 100ms ease, box-shadow 100ms ease, background 100ms ease;
+}
+
+button:hover {
+    background: #d44235;
+}
+
+button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 1px 1px 0 #302e5c;
+}
+
+br {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 32px 14px;
+    }
+
+    label {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+}

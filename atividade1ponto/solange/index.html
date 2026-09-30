@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="search-box">
+    <input type="text" id="pokemon-input" placeholder="Digite o nome ou ID (ex: 6)" />
+    <button id="search-btn">Buscar</button>
+  </div>
+
+  <p class="error-msg" id="error-msg">Pokémon não encontrado! Tente novamente.</p>
+
+  <div class="card" id="pokemon-card">
+    <div class="card-header">
+      <h2 class="pokemon-name" id="poke-name">---</h2>
+      <span class="pokemon-id" id="poke-id">#000</span>
+    </div>
+
+    <img src="" alt="Sprite do Pokémon" class="pokemon-img" id="poke-img" />
+
+    <!-- Badges de Tipo geradas via JS -->
+    <div class="types-container" id="poke-types"></div>
+
+    <!-- Status gerados via JS -->
+    <div class="stats-container" id="poke-stats"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+2. style.css

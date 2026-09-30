@@ -1,0 +1,40 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Pokédex</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Pokédex</h1>
+
+    <label>
+        Escolha o nome ou ID
+        <input type="text" id="pokemon">
+    </label>
+
+    <button onclick="buscar()">Buscar</button>
+
+    <div id="resultado">
+
+        <img id="imagem">
+        <h2 id="nome"></h2>
+        <p id="id"></p>
+        <p id="tipos"></p>
+        <p id="habilidades"></p>
+        <p id="hp"></p>
+        <p id="ataque"></p>
+        <p id="defesa"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!-- codigo html -->
+<form id="meuForm">
+    <label>nome
+    <input type="text" id="nome" required>
+    </label>
+    <button type="submit">Enviar</button>
+</form>
+
+<div id="resultado"></div>
+
+<!-- codigo js -->
+<script>
+const form = document.getElementById('meuForm');
+const resultado = document.getElementById('resultado');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    const nome = document.getElementById('nome').value;
+    resultado.innerHTML = `<p>Nome: ${nome}</p>`;
+});
+</script>    
