@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilda de Aventureiros - Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="page-index">
+        <header class="form-container">
+            <h1>Guilda de Aventureiros</h1>
+            <p class="subtitle">Registro de Invocação</p>
+            
+            <form id="formIndex">
+                <div class="form-group">
+                    <label for="nomeHeroi">Nome do Herói:</label>
+                    <input type="text" id="nomeHeroi" required minlength="3" maxlength="20" placeholder="Ex: Kazuma">
+                    <span class="error-msg" id="erroNome"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="classeHeroi">Classe:</label>
+                    <select id="classeHeroi" required>
+                        <option value="" disabled selected>Escolha sua classe</option>
+                        <option value="Guerreiro">Guerreiro</option>
+                        <option value="Mago">Mago</option>
+                        <option value="Arqueiro">Arqueiro</option>
+                        <option value="Curandeiro">Curandeiro</option>
+                    </select>
+                </div>
+
+                <div class="form-group row-group">
+                    <div class="half-width">
+                        <label for="nivelHeroi">Nível:</label>
+                        <input type="number" id="nivelHeroi" min="1" max="100" required value="1">
+                    </div>
+                    <div class="half-width">
+                        <label for="codigoHeroi">Código da Guilda:</label>
+                        <input type="text" id="codigoHeroi" required pattern="[A-Z]{3}-[0-9]{3}" placeholder="ABC-123">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailJogador">E-mail do Jogador (Alma):</label>
+                    <input type="email" id="emailJogador" required placeholder="heroi@outro-mundo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="senhaJogador">Senha do Selo:</label>
+                    <input type="password" id="senhaJogador" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="A senha deve ter no mínimo 8 caracteres, contendo pelo menos uma letra maiúscula, uma minúscula e um número." placeholder="Sua senha secreta">
+                    <span class="hint-msg">⚠️ Requisitos: Mín. 8 caracteres, 1 maiúscula, 1 minúscula e 1 número.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="corCard">Aura (Cor):</label>
+                    <select id="corCard">
+                        <option value="#3a86ff">Mana Azul</option>
+                        <option value="#ff006e">Fúria Carmesim</option>
+                        <option value="#8338ec">Magia Negra</option>
+                        <option value="#38b000">Cura Divina</option>
+                        <option value="#ffbe0b">Aura Dourada</option>
+                    </select>
+                </div>
+
+                <button type="button" id="btnProxima">PRÓXIMA ETAPA ➔</button>
+            </form>
+        </header>
+
+        <main class="preview-container">
+            <div class="hero-card" id="heroCard">
+                <div class="card-inner">
+                    <div class="hero-avatar" id="avatarCard">❓</div>
+                    <h2 class="hero-name" id="cardNome">Nome do Herói</h2>
+                    <p class="hero-class" id="cardClasse">Classe Desconhecida</p>
+                    <div class="level-badge">Nível <span id="cardNivel">1</span></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

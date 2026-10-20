@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criação do Herói - Etapa 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <main class="form-container">
+      <h2>Criar Herói (Etapa 1)</h2>
+      
+      <form id="form-heroi" action="#" method="POST">
+        <span id="mensagem-erro" class="mensagem-erro"></span>
+
+        <div class="campo">
+          <label for="nome">Nome do Herói:</label>
+          <input type="text" id="nome" name="nome" required minlength="3" maxlength="20" placeholder="Coloque o nome do personagem">
+        </div>
+
+        <div class="campo">
+          <label for="classe">Classe:</label>
+          <select id="classe" name="classe" required>
+            <option value="">Selecione uma classe</option>
+            <option value="sword">Guerreiro</option>
+            <option value="wizard">Mago</option>
+            <option value="hunter">Arqueiro</option>
+            <option value="heal">Curandeiro</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="nivel">Nível:</label>
+          <input type="number" id="nivel" name="nivel" min="1" max="100" value="1" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail do Jogador:</label>
+          <input type="email" id="email" name="email" required placeholder="jogador@email.com">
+        </div>
+
+        <div class="campo">
+          <label for="codigo">Código do Herói (ABC-123):</label>
+          <input type="text" id="codigo" name="codigo" pattern="[A-Z]{3}-[0-9]{3}" title="Formato exigido: 3 letras maiúsculas, hífen e 3 números (ex: ABC-123)" placeholder="ABC-123" required>
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Mínimo 8 caracteres, contendo pelo menos uma letra maiúscula, uma minúscula e um número." placeholder="Mínimo 8 caracteres" required>
+        </div>
+
+        <div class="campo">
+          <label for="cor">Cor do Card:</label>
+          <input type="color" id="cor" name="cor" value="#3b82f6">
+        </div>
+
+        <button type="submit" id="btn-proxima" class="btn">PRÓXIMA ETAPA</button>
+      </form>
+    </main>
+
+    <aside class="card-container">
+      <div class="card-visual">
+        <div class="card" id="card-heroi">
+          <div class="card-header" id="card-header">
+            <h3 id="card-nome">Nome do Herói</h3>
+            <span class="badge" id="card-classe">Classe</span>
+          </div>
+          <div class="card-body">
+            <p><strong>Nível:</strong> <span id="card-nivel">1</span></p>
+          </div>
+        </div>
+
+        <img id="card-imagem" class="card-imagem" alt="Ícone do herói" src="https://img.icons8.com/color/96/wizard.png">
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Herói - Etapa 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <main class="form-container">
+      <h2>Detalhes do Herói</h2>
+      
+      <div id="info-etapa1" class="info-heroi">
+        <div class="resumo-cabecalho-mini">
+          <img id="resumo-icone-etapa1" class="resumo-icone" alt="Ícone da classe" src="https://img.icons8.com/color/96/wizard.png">
+          <p>Herói: <strong id="resumo-nome-etapa1">-</strong> | Classe: <strong id="resumo-classe-etapa1">-</strong></p>
+        </div>
+      </div>
+
+      <form id="form-detalhes" action="#" method="POST">
+        <span id="mensagem-erro-etapa2" class="mensagem-erro"></span>
+
+        <div class="campo">
+          <label for="arma">Arma Principal:</label>
+          <select id="arma" name="arma" required>
+            <option value="">Selecione uma arma</option>
+            <option value="Espada e Escudo">Espada e Escudo</option>
+            <option value="Cajado Elemental">Cajado Elemental</option>
+            <option value="Arco Longo">Arco Longo</option>
+            <option value="Cálice da Cura">Cálice da Cura</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="vida">Quantidade de Vida (0-100):</label>
+          <input type="number" id="vida" name="vida" min="0" max="100" value="100" required>
+        </div>
+
+        <div class="campo">
+          <label for="mana">Quantidade de Mana (0-100):</label>
+          <input type="number" id="mana" name="mana" min="0" max="100" value="50" required>
+        </div>
+
+        <div class="campo">
+          <label for="dataCriacao">Data de Criação:</label>
+          <input type="date" id="dataCriacao" name="dataCriacao" required>
+        </div>
+
+        <div class="campo">
+          <label for="historia">Descrição / História (mínimo 20 caracteres):</label>
+          <textarea id="historia" name="historia" minlength="20" rows="4" required placeholder="Conte a história do seu personagem..."></textarea>
+        </div>
+
+        <div class="botoes-acao">
+          <button type="button" id="btn-voltar" class="btn btn-secundario">VOLTAR</button>
+          <button type="submit" id="btn-finalizar" class="btn">FINALIZAR PERSONAGEM</button>
+        </div>
+      </form>
+
+      <section id="secao-resumo" class="resumo-container hidden">
+        <h3>Ficha Completa do Personagem</h3>
+        <div id="conteudo-resumo"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

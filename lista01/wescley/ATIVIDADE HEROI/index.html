@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criador de Herói</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    
+    <section class="formulario">
+      <h1>Criar Herói</h1>
+
+      <form id="formHeroi">
+
+        <label for="nome">Nome do Herói</label>
+        <input type="text" id="nome" name="nome" required minlength="3" maxlength="20" placeholder="Ex.: Arthur">
+        <span class="erro" id="erro-nome"></span>
+
+        <label for="classe">Classe</label>
+        <select id="classe" name="classe" required>
+          <option value="">Selecione...</option>
+          <option value="Guerreiro">Guerreiro</option>
+          <option value="Mago">Mago</option>
+          <option value="Arqueiro">Arqueiro</option>
+          <option value="Curandeiro">Curandeiro</option>
+        </select>
+        <span class="erro" id="erro-classe"></span>
+
+        <label for="nivel">Nível (1 a 100)</label>
+        <input type="number" id="nivel" name="nivel" min="1" max="100" required>
+        <span class="erro" id="erro-nivel"></span>
+
+        <label for="email">E-mail do jogador</label>
+        <input type="email" id="email" name="email" required placeholder="voce@email.com">
+        <span class="erro" id="erro-email"></span>
+
+        <label for="codigo">Código do Herói (ABC-123)</label>
+        <input type="text" id="codigo" name="codigo" required
+               pattern="[A-Z]{3}-[0-9]{3}"
+               title="Use 3 letras maiúsculas, hífen e 3 números. Ex.: ABC-123"
+               placeholder="ABC-123">
+        <span class="erro" id="erro-codigo"></span>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required minlength="8"
+               pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}"
+               title="Mínimo de 8 caracteres, com letra maiúscula, minúscula e número.">
+        <span class="erro" id="erro-senha"></span>
+
+        <label for="cor">Cor do Herói</label>
+        <input type="color" id="cor" name="cor" value="#4a90d9">
+
+        <div class="botoes">
+          <button type="submit" id="btnCriar">CRIAR HERÓI</button>
+          <button type="button" id="btnProxima">PRÓXIMA ETAPA</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- CARD DO HERÓI -->
+    <section class="card" id="cardHeroi">
+      <div class="emoji" id="cardEmoji">❓</div>
+      <h2 id="cardNome">Nome do Herói</h2>
+      <p>Classe: <strong id="cardClasse">---</strong></p>
+      <p>Nível: <strong id="cardNivel">---</strong></p>
+      <p>Cor: <strong id="cardCor">---</strong></p>
+      <p class="mensagem" id="mensagemCriado"></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

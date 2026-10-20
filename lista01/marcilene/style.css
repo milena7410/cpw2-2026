@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.formulario,
+.card,
+.resumo {
+    width: 400px;
+    background: #1f2937;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 2px solid #475569;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #111827;
+    outline: none;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+input:user-valid,
+select:user-valid,
+textarea:user-valid {
+    border-color: #22c55e;
+}
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border-color: #ef4444;
+}
+
+.erro {
+    display: block;
+    min-height: 18px;
+    color: #fca5a5;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.botoes button {
+    flex: 1;
+}
+
+button.secundario {
+    background: #64748b;
+}
+
+button.secundario:hover {
+    background: #475569;
+}
+
+.card {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: #2563eb;
+}
+
+.card p {
+    font-size: 18px;
+    margin: 8px;
+}
+
+.dados-primeira-etapa,
+.resumo {
+    line-height: 1.7;
+}
+
+.resumo {
+    min-height: 300px;
+}
+
+.resumo p {
+    margin: 10px 0;
+    word-break: break-word;
+}

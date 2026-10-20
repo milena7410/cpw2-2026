@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Personagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+    <section class="formulario">
+        <h1>Detalhes do Herói</h1>
+
+        <div class="dados-primeira-etapa">
+            <p><strong>Herói:</strong> <span id="nomeHeroi"></span></p>
+            <p><strong>Classe:</strong> <span id="classeHeroi"></span></p>
+        </div>
+
+        <form id="formDetalhes">
+            <label for="arma">Arma principal</label>
+            <select id="arma" required>
+                <option value="">Selecione uma arma</option>
+                <option value="Espada">Espada</option>
+                <option value="Cajado">Cajado</option>
+                <option value="Arco">Arco</option>
+                <option value="Adaga">Adaga</option>
+            </select>
+
+            <label for="vida">Quantidade de vida</label>
+            <input type="number" id="vida" min="0" max="100" required>
+
+            <label for="mana">Quantidade de mana</label>
+            <input type="number" id="mana" min="0" max="100" required>
+
+            <label for="dataCriacao">Data de criação</label>
+            <input type="date" id="dataCriacao" required>
+
+            <label for="historia">Descrição / História</label>
+            <textarea id="historia" minlength="20" required></textarea>
+            <span class="erro" id="erroHistoria"></span>
+
+            <div class="botoes">
+                <button type="button" id="btnVoltar" class="secundario">VOLTAR</button>
+                <button type="submit">FINALIZAR PERSONAGEM</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="resumo" id="resumo">
+        <h2>Resumo do Personagem</h2>
+        <p><strong>Nome:</strong> <span id="resumoNome"></span></p>
+        <p><strong>Classe:</strong> <span id="resumoClasse"></span></p>
+        <p><strong>Arma:</strong> <span id="resumoArma">-</span></p>
+        <p><strong>Vida:</strong> <span id="resumoVida">-</span></p>
+        <p><strong>Mana:</strong> <span id="resumoMana">-</span></p>
+        <p><strong>Data:</strong> <span id="resumoData">-</span></p>
+        <p><strong>História:</strong> <span id="resumoHistoria">-</span></p>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

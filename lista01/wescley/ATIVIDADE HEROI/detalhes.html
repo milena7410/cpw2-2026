@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Herói</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+
+    <section class="formulario">
+      <h1>Detalhes do Herói</h1>
+
+      <p class="dados-primeira">
+        <span id="detEmoji">❓</span>
+        <strong id="detNome">---</strong> - <span id="detClasse">---</span>
+      </p>
+
+      <form id="formDetalhes">
+
+        <label for="arma">Arma principal</label>
+        <select id="arma" name="arma" required>
+          <option value="">Selecione...</option>
+          <option value="Espada">Espada</option>
+          <option value="Arco">Arco</option>
+          <option value="Cajado">Cajado</option>
+          <option value="Machado">Machado</option>
+          <option value="Adaga">Adaga</option>
+        </select>
+        <span class="erro" id="erro-arma"></span>
+
+        <label for="vida">Quantidade de vida (0 a 100)</label>
+        <input type="number" id="vida" name="vida" min="0" max="100" required>
+        <span class="erro" id="erro-vida"></span>
+
+        <label for="mana">Quantidade de mana (0 a 100)</label>
+        <input type="number" id="mana" name="mana" min="0" max="100" required>
+        <span class="erro" id="erro-mana"></span>
+
+        <label for="data">Data de criação do personagem</label>
+        <input type="date" id="data" name="data" required>
+        <span class="erro" id="erro-data"></span>
+
+        <label for="historia">Descrição / História (mínimo 20 caracteres)</label>
+        <textarea id="historia" name="historia" rows="4" required minlength="20"></textarea>
+        <span class="erro" id="erro-historia"></span>
+
+        <div class="botoes">
+          <button type="button" id="btnVoltar">VOLTAR</button>
+          <button type="submit" id="btnFinalizar">FINALIZAR PERSONAGEM</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card" id="resumo" hidden>
+      <h2>Resumo do Personagem</h2>
+      <p>Arma: <strong id="resArma"></strong></p>
+      <p>Vida: <strong id="resVida"></strong></p>
+      <p>Mana: <strong id="resMana"></strong></p>
+      <p>Data de criação: <strong id="resData"></strong></p>
+      <p>História: <strong id="resHistoria"></strong></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

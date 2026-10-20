@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Personagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="detalhesForm">
+        <h2>Detalhes do Personagem</h2>
+
+        <div id="infoHeroiResumo" style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 6px; margin-bottom: 12px; font-size: 13px;">
+            Carregando...
+        </div>
+
+        <label for="armaSelect">Arma Principal:</label>
+        <select id="armaSelect" required>
+            <option value="" disabled selected>Selecione a arma</option>
+            <option value="Espada Longa">⚔️ Espada Longa</option>
+            <option value="Cajado Mágico">🪄 Cajado Mágico</option>
+            <option value="Arco e Flecha">🏹 Arco e Flecha</option>
+            <option value="Poção Sagrada">🧪 Poção Sagrada</option>
+        </select>
+
+        <label for="vidaInput">Vida (0 a 100):</label>
+        <input type="number" id="vidaInput" min="0" max="100" value="100" required>
+
+        <label for="manaInput">Mana (0 a 100):</label>
+        <input type="number" id="manaInput" min="0" max="100" value="50" required>
+
+        <label for="dataInput">Data de Criação:</label>
+        <input type="date" id="dataInput" required>
+
+        <label for="historiaInput">História / Descrição:</label>
+        <textarea id="historiaInput" rows="3" minlength="20" required placeholder="Escreva pelo menos 20 caracteres..."></textarea>
+
+        <button type="button" id="voltarBtn" style="background: #555; margin-top: 10px;">VOLTAR</button>
+        <button type="button" id="finalizarBtn">FINALIZAR</button>
+    </form>
+
+    <div id="resumoFinal" class="hero-card" style="display: none; height: auto; text-align: left; padding: 15px;">
+        <h3>Resumo Final</h3>
+        <p id="resTexto" style="font-size: 12px; line-height: 1.4; color: #ddd;"></p>
+    </div>
+
+    <script src="detalhes.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    
+    <title>Cadastro do Herói - Etapa 1</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>Cadastro do Herói</h1>
+
+    <form id="form-heroi">
+
+    
+        <label for="nome">Nome do Herói:</label>
+        
+<br>
+
+        <input type="text" 
+               id="nome" 
+               name="nome" 
+               placeholder="Digite o nome do Herói" 
+               minlength="3" 
+               maxlength="20" 
+               required>
+
+<br>
+
+        <span class="msg-erro">O nome deve ter entre 3 e 20 caracteres.</span>
+
+<br><br>
+
+    
+        <label for="classe">Classe do Herói:</label>
+
+<br>
+
+        <select id="classe" name="classe" required>
+
+            <option value="">Selecione uma classe...</option>
+            <option value="Guerreiro">Guerreiro</option>
+            <option value="Mago">Mago</option>
+            <option value="Arqueiro">Arqueiro</option>
+            <option value="Curandeiro">Curandeiro</option>
+
+        </select>
+
+<br>
+
+        <span class="msg-erro">Selecione uma classe válida.</span>
+
+<br><br>
+
+       
+        <label for="nivel">Nível do Herói:</label>
+
+<br>
+
+        <input type="number" 
+               id="nivel" 
+               name="nivel" 
+               min="1" 
+               max="100" 
+               placeholder="1 a 100" 
+               required>
+
+<br>
+
+        <span class="msg-erro">O nível deve ser um número entre 1 e 100.</span>
+
+<br><br>
+
+        <label for="email">E-mail do Jogador:</label>
+        <br>
+        <input type="email" 
+               id="email" 
+               name="email" 
+               placeholder="exemplo@email.com" 
+               required>
+
+<br>
+
+        <span class="msg-erro">Insira um endereço de e-mail válido.</span>
+
+<br><br>
+
+      
+        <label for="codigo">Código do Herói:</label>
+
+<br>
+
+        <input type="text" 
+               id="codigo" 
+               name="codigo" 
+               placeholder="ABC-123" 
+               pattern="[A-Z]{3}-[0-9]{3}" 
+               required>
+
+<br>
+        <span class="msg-erro">O código deve seguir o padrão: 3 letras maiúsculas, hífen e 3 números (Ex: ABC-123).</span>
+
+<br><br>
+
+       
+        <label for="senha">Senha de Acesso:</label>
+
+<br>
+
+        <input type="password" 
+               id="senha" 
+               name="senha" 
+               placeholder="Digite sua senha" 
+               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" 
+               required>
+
+<br>
+
+        <span class="msg-erro">Mínimo de 8 caracteres, com ao menos 1 letra maiúscula, 1 minúscula e 1 número.</span>
+
+<br><br>
+
+       
+        <button type="button" id="btn-proximo">PRÓXIMA ETAPA</button>
+
+    </form>
+
+<br>
+
+    <h2>Card do Agente</h2>
+
+    <section id="painel-cards">
+
+        <article id="card-preview">
+
+            <h3 id="card-nome">Nome: -</h3>
+            <p id="card-classe">Classe: -</p>
+            <p id="card-nivel">Nível: -</p>
+
+        </article>
+
+    </section>
+
+    <br>
+
+    <h2>JSON dos Dados</h2>
+
+    <span id="json-output">{}</span>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

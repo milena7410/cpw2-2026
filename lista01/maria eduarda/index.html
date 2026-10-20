@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Criador de Herói</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="heroForm">
+        <h2>Criar Herói</h2>
+
+        <label for="nomeInput">Nome do Herói:</label>
+        <input type="text" id="nomeInput" required minlength="3" maxlength="20" placeholder="Ex: Arthur">
+
+        <label for="classeSelect">Classe:</label>
+        <select id="classeSelect" required>
+            <option value="" disabled selected>Selecione a classe</option>
+            <option value="Guerreiro">⚔️ Guerreiro</option>
+            <option value="Mago">🔮 Mago</option>
+            <option value="Arqueiro">🏹 Arqueiro</option>
+            <option value="Curandeiro">🌿 Curandeiro</option>
+        </select>
+
+        <label for="nivelInput">Nível:</label>
+        <input type="number" id="nivelInput" min="1" max="100" value="1" required>
+
+        <label for="emailInput">E-mail do Jogador:</label>
+        <input type="email" id="emailInput" required placeholder="seu@email.com">
+
+        <label for="codigoInput">Código do Herói (ABC-123):</label>
+        <input type="text" id="codigoInput" required pattern="[A-Z]{3}-\d{3}" placeholder="ABC-123">
+
+        <label for="senhaInput">Senha:</label>
+        <input type="password" id="senhaInput" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mín 8 chars, 1 maiúscula, 1 número">
+
+        <label for="corSelect">Cor do Card:</label>
+        <select id="corSelect">
+            <option value="#3498db">Azul</option>
+            <option value="#e74c3c">Vermelho</option>
+            <option value="#2ecc71">Verde</option>
+            <option value="#9b59b6">Roxo</option>
+        </select>
+
+        <button type="button" id="AvancarBtn">PRÓXIMA ETAPA</button>
+    </form>
+
+    <div class="hero-card" id="meuCard">
+        <div class="card-header">
+            <span id="cardNome">Herói</span>
+            <span id="cardNivel">Nv. 1</span>
+        </div>
+        <div class="card-emoji" id="cardEmoji">⚔️</div>
+        <div id="cardClasse" style="text-align: center; font-size: 14px; color: #aaa;">Guerreiro</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

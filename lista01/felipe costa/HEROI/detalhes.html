@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Atividade 2 heroi</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>Detalhes do Herói - Segunda Etapa</h1>
+
+
+    <div id="resumo-primeira-etapa">
+
+    <h3>Herói Selecionado: <span id="heroi-nome-display">-</span></h3>
+
+        <p>Classe: <span id="heroi-classe-display">-</span></p>
+
+    </div>
+
+<br>
+
+    <form id="form-detalhes">
+
+
+        <label for="arma">Arma Principal:</label>
+
+<br>
+
+    <select id="arma" name="arma" required>
+
+            <option value="">Escolha uma arma...</option>
+            <option value="Espada">Espada</option>
+            <option value="Cajado">Cajado</option>
+            <option value="Arco Longo">Arco Longo</option>
+            <option value="Livro de Feitiços">Livro de Feitiços</option>
+
+    </select>
+
+ <br>
+
+    <span class="msg-erro">Selecione uma arma.</span>
+
+<br><br>
+
+  
+        <label for="vida">Vida (HP):</label>
+
+<br>
+
+        <input type="number" 
+               id="vida" 
+               name="vida" 
+               min="0" 
+               max="100" 
+               placeholder="0 a 100" 
+               required>
+
+<br>
+
+        <span class="msg-erro">Digite um valor de vida entre 0 e 100.</span>
+
+<br><br>
+
+
+        <label for="mana">Mana (MP):</label>
+
+<br>
+
+        <input type="number" 
+               id="mana" 
+               name="mana" 
+               min="0" 
+               max="100" 
+               placeholder="0 a 100" 
+               required>
+
+<br>
+
+        <span class="msg-erro">Digite um valor de mana entre 0 e 100.</span>
+
+<br><br>
+
+        <label for="dataCriacao">Data de Criação:</label>
+        <br>
+        <input type="date" 
+               id="dataCriacao" 
+               name="dataCriacao" 
+               required>
+
+<br>
+
+        <span class="msg-erro">Selecione uma data válida.</span>
+
+<br><br>
+
+
+        <label for="historia">História / Descrição:</label>
+
+<br>
+
+        <textarea id="historia" 
+                  name="historia" 
+                  rows="4" 
+                  cols="40" 
+                  minlength="20" 
+                  placeholder="Escreva a história do herói (mínimo de 20 caracteres)!" 
+                  required></textarea>
+
+<br>
+
+        <span class="msg-erro">A história deve conter pelo menos 20 caracteres.</span>
+
+<br><br>
+
+        <button type="button" id="btn-voltar">VOLTAR</button>
+
+        <button type="button" id="btn-finalizar">FINALIZAR HEROI</button>
+
+    </form>
+
+<br>
+
+    <h2>Resumo Final do Personagem</h2>
+
+    <section id="resumo-final" style="display: none;">
+
+        <p><strong>Arma:</strong> <span id="resumo-arma">-</span></p>
+        <p><strong>Vida:</strong> <span id="resumo-vida">-</span></p>
+        <p><strong>Mana:</strong> <span id="resumo-mana">-</span></p>
+        <p><strong>Data de Criação:</strong> <span id="resumo-data">-</span></p>
+        <p><strong>História:</strong> <span id="resumo-historia">-</span></p>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

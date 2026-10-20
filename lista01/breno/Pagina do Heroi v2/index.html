@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina do Heroi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="divPai">
+        <header class="divHeader">
+
+            <div class="conteudoHeader">
+                <h1 class="TituloPagina">Esta é a pagina do seu Herói</h1>
+            </div>
+
+
+            <nav class="barraNavegação">
+                <button class="btn">
+                    HOME
+                </button>
+
+                <button class="btn">
+                    DESCRIÇÃO
+                </button>
+            </nav>
+
+        </header>
+
+
+        <main class="divBody">
+            
+            
+            <div class="divFooter">
+
+            </div>
+            
+            <form class="formHeroi">
+                <div class="inputsHeroi">
+                    <div class="campo">
+                        <label>Nome : </label>
+                        <div class="campo-container">
+                            <input id="nome" type="text" name="nome" pattern="[A-Za-zÀ-ú ]{3,20}" required
+                                placeholder="Digite o Nome do Seu Herói" title="Caracteres Min: 3 / Max: 20">
+                            <span class="erro-mensagem">Obrigatório*</span>
+                        </div>
+                    </div>
+
+
+                    <div class="campo">
+                        <label>Classe: </label>
+                        <div class="campo-container">
+                            <Select required name="classe">
+                                <option value="" selected disabled hidden>Selecione sua Classe</option>
+
+                                <option value="Cavaleiro">Cavaleiro</option>
+                                <option value="Mago">Mago</option>
+                                <option value="Arqueiro">Arqueiro</option>
+                                <option value="Healer">Healer</option>
+
+                            </Select>
+                            <span class="erro-mensagem">Obrigatório*</span>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label>Nivel: </label>
+                        <div class="campo-container">
+                            <input type="number" name="nivel" value="0" min="0" required max="100">
+                            <span class="erro-mensagem">Obrigatório*</span>
+                        </div>
+                    </div>
+
+
+                    <div class="campo">
+                        <label>E-mail: </label>
+                        <div class="campo-container">
+                            <input type="email" name="email" required placeholder="fulano@email.com">
+                            <span class="erro-mensagem">Obrigatório*</span>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label>HeroCode</label>
+                        <div campo-container>
+                            <input id="codigoHeroi" type="text" required name="codigo"
+                                pattern="[A-Z]{3}-[0-9]{3}" title="Apenas MAIUSCULAS" placeholder="ABC-123">
+                            <span class="erro-mensagem">Obrigatório*</span>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label>Senha</label>
+                        <div campo-container>
+                            <input type="password" required name="senha"
+                                pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z0-9]{8,}" minlength="8"
+                                placeholder="Abcde123">
+                            <span class="erro-mensagem">Obrigatório*</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <button type="submit" id="btnSeguir" class="btn">Seguinte</button>
+                </div>
+
+            </form>
+
+            <div class="cardHeroi">
+                <div class="nomeCard"></div>
+                <div class="imagemCard"></div>
+                <div class="headerCard"></div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

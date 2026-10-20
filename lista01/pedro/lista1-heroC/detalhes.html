@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Aventureiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="page-detalhes">
+        <header class="form-container">
+            <h1>Atributos Secundários</h1>
+            <p class="subtitle">Aventureiro: <span id="nomeHeroiDisplay" style="color:var(--accent); font-weight:bold;"></span> (<span id="classeHeroiDisplay"></span>)</p>
+            
+            <form id="formDetalhes">
+                <div class="form-group">
+                    <label for="armaPrincipal">Arma Principal:</label>
+                    <select id="armaPrincipal" required>
+                        <option value="" disabled selected>Escolha sua relíquia</option>
+                        <option value="Espada Larga">Espada Larga de Ferro</option>
+                        <option value="Cajado de Carvalho">Cajado de Carvalho Ancestral</option>
+                        <option value="Arco Longo">Arco Longo Élfico</option>
+                        <option value="Livro de Feitiços">Grimório Proibido</option>
+                    </select>
+                </div>
+
+                <div class="form-group row-group">
+                    <div class="half-width">
+                        <label for="vidaHeroi">Pontos de Vida (HP):</label>
+                        <input type="number" id="vidaHeroi" min="0" max="100" required>
+                    </div>
+                    <div class="half-width">
+                        <label for="manaHeroi">Pontos de Mana (MP):</label>
+                        <input type="number" id="manaHeroi" min="0" max="100" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dataCriacao">Data de Invocação:</label>
+                    <input type="date" id="dataCriacao" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="historiaHeroi">História / Origem (Min 20 chars):</label>
+                    <textarea id="historiaHeroi" minlength="20" required placeholder="Conte como você foi invocado para este mundo..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" id="btnVoltar" class="btn-secondary">⬅ VOLTAR</button>
+                    <button type="button" id="btnFinalizar">FINALIZAR REGISTRO ⚔️</button>
+                </div>
+            </form>
+        </header>
+
+        <main class="preview-container">
+            <div id="resumoFinal" class="resumo-box" style="display: none;">
+                <h2>📜 Ficha Oficial Aprovada</h2>
+                <div class="resumo-content">
+                    <p><strong>Relíquia:</strong> <span id="resumoArma"></span></p>
+                    <p><strong>Atributos:</strong> <span style="color:#ff4d4d">❤️ <span id="resumoVida"></span> HP</span> | <span style="color:#4facfe">💧 <span id="resumoMana"></span> MP</span></p>
+                    <p><strong>Invocado em:</strong> <span id="resumoData"></span></p>
+                    <p class="historia-box"><strong>Lore:</strong> <br><span id="resumoHistoria"></span></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

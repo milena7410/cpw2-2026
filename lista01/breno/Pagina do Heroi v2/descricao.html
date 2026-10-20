@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descriçao</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="divPai">
+        <header class="divHeader">
+
+            <div class="conteudoHeader">
+                <h1 class="TituloPagina">Continue Buildando seu Herói</h1>
+            </div>
+
+
+            <nav class="barraNavegação">
+                <button id="btnHome" class="btn">
+                    HOME
+                </button>
+            </nav>
+
+        </header>
+
+
+        <main class="divBody">
+            
+            
+            <div class="divFooter">
+
+            </div>
+            
+            <form class="formHeroi">
+                <div class="inputsHeroi">
+                    
+                    <div class="campo">
+                        <label>Arma </label>
+                        <div class="campo-container">
+                            <Select required name="arma">
+                                <option value="" selected disabled hidden>Selecione sua Arma</option>
+
+                                <option value="Espada">Espada</option>
+                                <option value="Livro">Grimório</option>
+                                <option value="Arco">Arco</option>
+                                <option value="Cajado">Cajado</option>
+
+                            </Select>
+                            <span class="erro-mensagem">Obrigatório*</span>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label>Vida: </label>
+                        <div class="campo-container">
+                            <input type="number" name="vida" value="0" min="0" required max="100">
+                            <span class="erro-mensagem">Obrigatório*</span>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label>Mana: </label>
+                        <div class="campo-container">
+                            <input type="number" name="mana" value="0" min="0" required max="100">
+                            <span class="erro-mensagem">Obrigatório*</span>
+                        </div>
+                    </div>
+
+
+                    <div class="campo">
+                        <label>Data Criação</label>
+                        <div campo-container>
+                            <input id="criação" type="date" required name="criacao">
+                            <span class="erro-mensagem">Obrigatório*</span>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label>Descrição</label>
+                        <div campo-container>
+                            <textarea type="text" name="descricao"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <button type="submit" id="btnSeguir" class="btn">Finalizar</button>
+                </div>
+
+            </form>
+
+            <div class="cardHeroiDesc">
+                
+            </div>
+        </main>
+
+    </div>
+
+    <script src="scriptdescript.js"></script>
+</body>
+
+</html>
