@@ -1,0 +1,140 @@
+:root {
+    --cor-fundo: #ffffff;
+    --cor-texto: #111111;
+    --cor-azul-destaque: #3b82f6;
+    --borda-raio: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    overflow-x: hidden;
+}
+
+/* Header */
+.header-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* logo, desisto */
+.logo-img {
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.btn-saiba {
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Hero principal */
+.hero-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 8%;
+    min-height: 70vh;
+}
+
+.hero-left-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 500px;
+}
+
+.hero-text-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.hero-text-content p {
+    font-size: 1.2rem;
+    color: #666666;
+}
+
+.btn-down {
+    background-color: var(--cor-azul-destaque);
+    color: #ffffff;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 14px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.download-info {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+/* homem escutando a musica, punk */
+.Imagem-lado {
+    background-color: #3b82f6;
+    padding: 30px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img-card {
+    width: 260px;
+    height: 260px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/* Animações */
+@keyframes subirNaTela {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-1, .hero-left-box, .Imagem-lado {
+    animation: subirNaTela 0.8s ease forwards;
+}
+
+.btn-saiba:hover, .btn-down:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+}

@@ -1,0 +1,34 @@
+.geostar-regular {
+  font-family: "Geostar", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+      font-family: "Geostar", serif;
+
+}
+
+#main{
+    display: flex;
+    gap: 15px;
+}
+
+#div1{
+    border: 2px solid black;
+    padding: 10px;
+}
+#div2{
+    border: 2px solid black;
+    padding: 10px;
+}
+
+@media (max-width:768px){
+    #main{
+      flex-direction: column;  
+    }
+}
+
+img{
+    cursor: pointer;
+}
