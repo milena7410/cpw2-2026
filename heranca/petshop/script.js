@@ -7,17 +7,24 @@ class Pet {
   getIdadeHumana() {
     return this.idade * 7; 
   }
+
 }
 
 class Cao extends Pet {
   emitirSom() {
     return "Au Au!";
   }
+  gerarImg(){
+    return "https://img.icons8.com/color/48/puppy.png"
+  }
 }
 
 class Gato extends Pet {
   emitirSom() {
     return "Miau!";
+  }
+  gerarImg(){
+    return "https://img.icons8.com/doodle/48/cat--v1.png"
   }
 }
 
@@ -37,6 +44,7 @@ function cadastrarPet() {
   document.getElementById('resultado').innerHTML = `
     <strong>Pet:</strong> ${pet.nome} <br>
     <strong>Som:</strong> ${pet.emitirSom()} <br>
-    <strong>Idade Humana:</strong> ${pet.getIdadeHumana()} anos
-  `;
+    <strong>Idade Humana:</strong> ${pet.getIdadeHumana()} anos 
+    <img src="${pet.gerarImg()}">
+      `;
 }
